@@ -5,20 +5,20 @@ class Admin_Class
 
 /* -------------------------set_database_connection_using_PDO---------------------- */
 
-	public function __construct()
-	{ 
-        $host_name='localhost';
-		$user_name='root';
-		$password='';
-		$db_name='workflow-db';
+public function __construct()
+{ 
+	$host_name='us-cdbr-east-06.cleardb.net';
+	$user_name='bc8a2b80412599';
+	$password='7e8cb8e1';
+	$db_name='heroku_af56457955d7054';
 
-		try{
-			$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password);
-			$this->db = $connection; // connection established
-		} catch (PDOException $message ) {
-			echo $message->getMessage();
-		}
+	try{
+		$connection=new PDO("mysql:host={$host_name}; dbname={$db_name}", $user_name,  $password);
+		$this->db = $connection; // connection established
+	} catch (PDOException $message ) {
+		echo $message->getMessage();
 	}
+}
 
 /* ---------------------- test_form_input_data ----------------------------------- */
 	
