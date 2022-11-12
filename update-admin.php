@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Update</title>
   <link rel="icon" href="assets/img/icon.jpg">
+	<link rel="stylesheet" href="assets/css/loading.css">
 </head>
 <body>
 
@@ -118,7 +119,16 @@ include("include/footer.php");
 
 ?>
 
-  
+<div class="loader-wrapper">
+	<span class="loader loader-gradient-green"><span class="loader-inner"></span></span>
+</div>
+
+<script>
+	$(window).on("load", function() {
+		$(".loader-wrapper").fadeOut("slow");
+	});
+</script> 
+
 </body>
 </html>
 
