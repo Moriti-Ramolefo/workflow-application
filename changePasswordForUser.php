@@ -19,9 +19,10 @@
   </style>
 
 <?php
-require 'authentication.php'; // admin authentication check 
+require 'authentication.php';
 
-// auth check
+// authentication check
+
 if(isset($_SESSION['admin_id'])){
   $user_id = $_SESSION['admin_id'];
   $user_name = $_SESSION['name'];
@@ -37,6 +38,8 @@ $page_name="Login";
 include("include/login_header.php");
 
 ?>
+
+<!-- User first time change password (after getting temp password) -->
 
 <div class="row">
 	<div class="col-md-4 col-md-offset-3">
@@ -63,12 +66,13 @@ include("include/login_header.php");
 	</div>
 </div>
 
-
 <?php
 
 include("include/footer.php");
 
 ?>
+
+<!-- loader wrapper --> 
 
 <div class="loader-wrapper">
 	<span class="loader loader-gradient-green"><span class="loader-inner"></span></span>

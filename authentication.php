@@ -1,3 +1,5 @@
+<!-- authetication check code -->
+
 <?php 
 
 ob_start();

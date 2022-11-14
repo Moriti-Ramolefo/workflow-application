@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `task_info` (
 --
 
 INSERT INTO `task_info` (`task_id`, `t_title`, `t_description`, `t_start_time`, `t_end_time`, `t_user_id`, `status`) VALUES
-(20, 'Communications', 'You''re assigned to handle incoming calls and other communications within the office.', '2021-03-22 12:00', '2021-03-22 13:00', 17, 2),
-(21, 'Filing', 'You''re assigned to management of filing system.', '2021-03-22 10:00', '2021-03-22 15:10', 22, 0);
+(20, 'reception', 'You''re assigned to handle incoming calls and other communication-based tasks within the office.', '2021-03-22 12:00', '2021-03-22 13:00', 17, 2),
+(21, 'Filing', 'You''re assigned to the management of filing system within the office.', '2021-03-22 10:00', '2021-03-22 15:10', 22, 0);
 
 -- --------------------------------------------------------
 

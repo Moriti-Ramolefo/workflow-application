@@ -8,7 +8,6 @@
 	<link rel="icon" href="assets/img/icon.jpg">
 	<link rel="stylesheet" href="assets/css/loading.css">
 </head>
-
 <body>
 
 <style>
@@ -34,9 +33,10 @@
 	</style>
 
 <?php
-require 'authentication.php'; // admin authentication check 
+require 'authentication.php';
 
-// auth check
+// authentication check
+
 if(isset($_SESSION['admin_id'])){
   $user_id = $_SESSION['admin_id'];
   $user_name = $_SESSION['admin_name'];
@@ -55,13 +55,12 @@ include("include/login_header.php");
 
 ?>
 
+<!-- Login platform -->
+
 <div class="row">
 	<div class="col-md-4 col-md-offset-3">
-		<!-- LOGO goes here -->
-		<center><h2 style="margin-top:1px;"></h2></center>
-		<!-- LOGO goes here -->
-			<div class="well" style="position:relative;top:20vh;">
-				<form class="form-horizontal form-custom-login" action="" method="POST">
+		<div class="well" style="position:relative;top:20vh;">
+			<form class="form-horizontal form-custom-login" action="" method="POST">
 				<div class="form-heading" style="background: transparent;">
 					<h2 class="text-center" style="font-weight: bold; font-size: 30px; color: #000;">Login</h2>
 					<hr style="border: 5px solid #00b16a;">
@@ -77,18 +76,18 @@ include("include/login_header.php");
 					<input type="password" class="form-control" placeholder="Password" name="admin_password" required/>
 				</div>
 				<button type="submit" name="login_btn" class="btn btn-info pull-right" style="border: 0; border-radius: 10px;">Sign In</button>
-				</form>			
-			</div>
-		
+			</form>			
+		</div>
 	</div>
 </div>
-
 
 <?php
 
 include("include/footer.php");
 
 ?>
+
+<!-- loader wrapper --> 
 
 <div class="loader-wrapper">
 	<span class="loader loader-gradient-green"><span class="loader-inner"></span></span>
