@@ -87,9 +87,12 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`user_id`, `fullname`, `username`, `email`, `password`, `temp_password`, `user_role`) VALUES
-(1, 'Administrator', 'admin', 'administrator@gmail.com', 'cac29d7a34687eb14b37068ee4708e7b', NULL, 1),
-(17, 'Jane Doe', 'user1', 'janedoe@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '', 2),
-(18, 'Logan Smith', 'user2', 'logansmith@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '', 2);
+(1, 'Terror Mayimele', 'admin', 'terror.tivani@gmail.com', '0192023a7bbd73250516f069df18b500', NULL, 1), 
+(2, 'Moriti Ramolefo', 'admin1', 'ramolefo.moriti@gmail.com', '0192023a7bbd73250516f069df18b500', NULL, 1), 
+(3, 'Hannon Mulaudzi', 'admin2', 'hannonmulaudzi@gmail.com', '0192023a7bbd73250516f069df18b500', NULL, 1), 
+(17, 'Terror Mayimele', 'user', 'terror.tivani@gmail.com', '3e7898bd2fc53a4ced081380893bcab3', '', 2),
+(18, 'Moriti Ramolefo', 'user1', 'ramolefo.moriti@gmail.com', 'eb8ed5db82587f7a9bdbab2c55cbea4a', '', 2),
+(19, 'Hannon Mulaudzi', 'user2', 'hannonmulaudzi@gmail.com', '0a8da84de683d6defdf4b87fcedbb993', '', 2);
 
 --
 -- Indexes for dumped tables
