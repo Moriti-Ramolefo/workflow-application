@@ -27,14 +27,14 @@
 
 **Admin Login Details**
 
-Username: admin
-Password: admin123
-<br>
-Username: admin1
-Password: admin123
-<br>
-Username: admin2
-Password: admin123
+Username: admin\
+Password: admin123\
+
+Username: admin1\
+Password: admin123\
+
+Username: admin2\
+Password: admin123\
 
 **User Login Details** 
 
