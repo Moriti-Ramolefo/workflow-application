@@ -1,4 +1,4 @@
-**Steps to run this on your local machine**
+**<u>Steps to run this on your local machine</u>**
 
 
 1. download the zip file and save it in htdocs on xampp (make sure you have 'xampp v7.4.12' phpmyadmin software installed on "C:\" diractory)
@@ -22,7 +22,7 @@
 10. lastly, paste this link on your browser `http://localhost:8888/workflow-app/` and you are DONE !! :)
 
 
-<!-- ******************************************************************************************************************************************** -->
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 
 **Admin Login Details**
