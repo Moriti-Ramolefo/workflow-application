@@ -27,31 +27,31 @@
 
 ## Admin Login Details
 
-Username: *admin*\
-Password: *admin123*
+**Username:** *admin*\
+**Password:** *admin123*
 
-Username: *admin1*\
-Password: *admin123*
+**Username:** *admin1*\
+**Password:** *admin123*
 
-Username: *admin2*\
-Password: *admin123*
+**Username:** *admin2*\
+**Password:** *admin123*
 
 ## User Login Details
 
-Username: *user*\
-Password: *terror123*
+**Username:** *user*\
+**Password:** *terror123*
 
-Username: *user1*\
-Password: *moriti123*
+**Username:** *user1*\
+**Password:** *moriti123*
 
-Username: *user2*\
-Password: *hannon123*
+**Username:** *user2*\
+**Password:** *hannon123*
 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-NOTE: After creating a new account for the users, you'll get a random-generated
+**NOTE:** After creating a new account for the users, you'll get a random-generated
 temporary password which is provided inside "Manage User" section of the application.
 Copy that temporary password and use it for the user's login to reset it to the user's preference.
 
