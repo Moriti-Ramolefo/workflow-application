@@ -1,4 +1,4 @@
-<ins>Steps to run this on your local machine</ins>
+# Steps to run this on your local machine
 
 
 1. download the zip file and save it in htdocs on xampp (make sure you have 'xampp v7.4.12' phpmyadmin software installed on "C:\" diractory)
@@ -25,27 +25,27 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
-**Admin Login Details**
+## Admin Login Details
 
-Username: admin\
-Password: admin123\
+Username: *admin*\
+Password: *admin123*
 
-Username: admin1\
-Password: admin123\
+Username: *admin1*\
+Password: *admin123*
 
-Username: admin2\
-Password: admin123\
+Username: *admin2*\
+Password: *admin123*
 
-**User Login Details** 
+## User Login Details
 
-Username: user
-Password: terror123
+Username: *user*\
+Password: *terror123*
 
-Username: user1
-Password: moriti123
+Username: *user1*\
+Password: *moriti123*
 
-Username: user2
-Password: hannon123
+Username: *user2*\
+Password: *hannon123*
 
 
 
