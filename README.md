@@ -19,7 +19,7 @@
 
 9. once imported, scroll down and click GO!.
 
-10. lastly, paste this link on your browser `http://localhost:8888/workflow-app/` and you are DONE !! :)
+10. lastly, paste this link on your browser `http://localhost:8888/workflow-app/` and you are DONE !! #smileys--emotion `:smiley:`
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
