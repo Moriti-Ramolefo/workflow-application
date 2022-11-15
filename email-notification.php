@@ -17,6 +17,9 @@
 		  background-size: cover !important;
 		  backdrop-filter: blur(5px) !important;
 	  }
+    #status {
+      color: #999;
+    }
   </style>
   
 <?php
@@ -142,7 +145,24 @@ $mail->smtpClose();
                     <div class="form-group">
                       <label class="control-label col-sm-4">Status</label>
                     <div class="col-sm-6">
-                      <input type="text" name="status" placeholder="Enter Status" class="form-control input-custom">
+                      <!-- <input type="text" name="status" placeholder="Enter Status" class="form-control input-custom"> -->
+
+                      <select class="form-control input-custom" name="status" required>
+                      <option value="" id="status">Select Status...</option>
+                        <?php
+                            $selected = "";
+                            $options = array('DUE', 'OVERDUE');
+
+                            foreach ($options as $option) {
+                              if ($selected == $option) {
+                                echo "<option class='form-control input-custom' selected = '$selected' value='$option'>$option</option>";
+                              }
+                              else {
+                                echo "<option class='form-control input-custom' value='$option'>$option</option>";
+                              }
+                            }
+                        ?> 
+                      </select>
                     </div>
                     </div>
                     <div class="form-group">
