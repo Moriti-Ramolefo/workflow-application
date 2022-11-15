@@ -37,7 +37,7 @@ if ($user_id == NULL || $security_key == NULL) {
 $user_role = $_SESSION['user_role'];
 
 $page_name="Edit Task";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 ?>
 
@@ -182,7 +182,7 @@ $mail->smtpClose();
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

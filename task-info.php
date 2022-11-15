@@ -52,7 +52,7 @@ if(isset($_POST['add_task_post'])){
 }
 
 $page_name="Task_Info";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 ?>
 
@@ -226,7 +226,7 @@ include("include/sidebar.php");
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

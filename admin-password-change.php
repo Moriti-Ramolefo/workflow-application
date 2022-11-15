@@ -41,7 +41,7 @@ if(isset($_POST['btn_admin_password'])){
 }
              
 $page_name="Admin";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 ?>
 
@@ -133,7 +133,7 @@ include("include/sidebar.php");
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

@@ -42,7 +42,7 @@ if(isset($_POST['update_task_info'])){
 }
 
 $page_name="Edit Task";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 $sql = "SELECT a.*, b.fullname 
 FROM task_info a
@@ -113,7 +113,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

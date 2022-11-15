@@ -42,7 +42,7 @@ if(isset($_POST['update_task_info'])){
 }
 
 $page_name="Edit Task";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 $sql = "SELECT * FROM task_info WHERE task_id='$task_id' ";
 $info = $obj_admin->manage_all_info($sql);
@@ -154,7 +154,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

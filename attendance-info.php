@@ -53,7 +53,7 @@ if(isset($_POST['add_punch_out'])){
 }
 
 $page_name="Attendance";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 ?>
 
@@ -180,7 +180,7 @@ include("include/sidebar.php");
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

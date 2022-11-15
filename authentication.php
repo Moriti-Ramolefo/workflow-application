@@ -1,4 +1,4 @@
-<!-- authetication check code -->
+<!-- authetication code required -->
 
 <?php 
 

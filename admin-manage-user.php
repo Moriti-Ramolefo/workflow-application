@@ -54,7 +54,7 @@ if(isset($_GET['delete_user'])){
 }
 
 $page_name="Admin";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 if(isset($_POST['add_user'])){
   $error = $obj_admin->add_new_user($_POST);
@@ -193,7 +193,7 @@ if(isset($_SESSION['update_user_pass'])){
   echo '<script>alert("Password updated successfully");</script>';
   unset($_SESSION['update_user_pass']);
 }
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

@@ -51,7 +51,7 @@ if(isset($_POST['login_btn'])){
 }
 
 $page_name="Login";
-include("include/login_header.php");
+include("includes/login_header.php");
 
 ?>
 
@@ -83,7 +83,7 @@ include("include/login_header.php");
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 

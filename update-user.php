@@ -53,7 +53,7 @@ $sql = "SELECT * FROM tbl_admin WHERE user_id='$admin_id' ";
 $info = $obj_admin->manage_all_info($sql);
 $row = $info->fetch(PDO::FETCH_ASSOC);     
 $page_name="Admin";
-include("include/sidebar.php");
+include("includes/sidebar.php");
 
 ?>
 
@@ -126,7 +126,7 @@ include("include/sidebar.php");
 
 <?php
 
-include("include/footer.php");
+include("includes/footer.php");
 
 ?>
 
