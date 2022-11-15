@@ -8,7 +8,7 @@
 }
 
 .glitch {
-    color: rgb(223, 191, 191);
+    color: rgb(223, 255, 255);
     position: relative;
     font-size: 1.9vw;
     animation: glitch 5s 5s infinite;
@@ -98,7 +98,7 @@
 
 .glow {
     @extend .glitch;
-    text-shadow: 0 0 1000px rgb(223, 191, 191);
+    text-shadow: 0 0 1000px rgb(223, 255, 255);
     color: transparent;
     position: absolute;
     top: 0;
