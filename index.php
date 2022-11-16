@@ -71,6 +71,7 @@ include("includes/login_header.php");
 				<?php if(isset($info)){ ?>
 				<h5 class="alert alert-danger"><?php echo $info; ?></h5>
 				<?php } ?>
+				
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Username" name="username" required/>
 				</div>
