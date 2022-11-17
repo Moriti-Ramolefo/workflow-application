@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `task_info` (
   `t_title` varchar(120) NOT NULL,
   `t_description` text,
   `t_start_time` varchar(100) DEFAULT NULL,
+  `t_time_stamp` datetime default current_timestamp,
   `t_end_time` varchar(100) DEFAULT NULL,
   `t_user_id` int(20) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0' COMMENT '0 = incomplete, 1 = In progress, 2 = complete'
