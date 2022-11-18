@@ -98,7 +98,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 									</div>
 									<div class="form-group">
 										<div class="col-sm-3">
-											<a title="Update Task"  href="task-info.php"><span class="btn btn-success-custom btn-xs">Go Back</span></a>
+											<a title="Update Task"  href="task-info.php"><span class="btn btn-danger-custom btn-xs">Back</span></a>
 										</div>
 									</div>
 					    		</form> 

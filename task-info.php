@@ -215,7 +215,7 @@ include("includes/sidebar.php");
                 <a title="Update Task"  href="edit-task.php?task_id=<?php echo $row['task_id'];?>"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;
                 <a title="View Task" href="task-details.php?task_id=<?php echo $row['task_id']; ?>"><span class="glyphicon glyphicon-folder-open"></span></a>&nbsp;&nbsp;
               <?php if($user_role == 2){ ?>
-                <a title="Upload Document"  href="upload.html"><span class="glyphicon glyphicon-upload"></span></a>&nbsp;&nbsp;
+                <a title="Upload Document"  href="gd-index.php"><span class="glyphicon glyphicon-upload"></span></a>&nbsp;&nbsp;
               <?php } ?>
               <?php if($user_role == 1){ ?>
                 <a title="Notification"  href="email-notification.php"><span class="glyphicon glyphicon-bell"></span></a>&nbsp;&nbsp;
