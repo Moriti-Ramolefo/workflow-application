@@ -49,7 +49,8 @@ INSERT INTO `attendance_info` (`aten_id`, `atn_user_id`, `in_time`, `out_time`, 
 --
 
 CREATE TABLE IF NOT EXISTS `task_info` (
-`task_id` int(50) NOT NULL,
+  `task_id` int(50) NOT NULL,
+  `t_email` varchar(100) NOT NULL,
   `t_title` varchar(120) NOT NULL,
   `t_description` text,
   `t_start_time` varchar(100) DEFAULT NULL,
@@ -63,9 +64,9 @@ CREATE TABLE IF NOT EXISTS `task_info` (
 -- Dumping data for table `task_info`
 --
 
-INSERT INTO `task_info` (`task_id`, `t_title`, `t_description`, `t_start_time`, `t_end_time`, `t_user_id`, `status`) VALUES
-(20, 'reception', 'You''re assigned to handle incoming calls and other communication-based tasks within the office.', '2021-03-22 12:00', '2021-03-22 13:00', 17, 2),
-(21, 'Filing', 'You''re assigned to the management of filing system within the office.', '2021-03-22 10:00', '2021-03-22 15:10', 22, 0);
+INSERT INTO `task_info` (`task_id`, `t_email`, `t_title`, `t_description`, `t_start_time`, `t_end_time`, `t_user_id`, `status`) VALUES
+(15, 'terror.tivani@gmail.com', 'reception', 'You''re assigned to handle incoming calls and other communication-based tasks within the office.', '2022-11-16 12:00', '2022-11-16 13:00', 17, 2),
+(16, 'ramolefo.moriti@gmail.com', 'Filing', 'You''re assigned to the management of filing system within the office.', '2022-11-17 10:00', '2022-11-17 15:10', 18, 0);
 
 -- --------------------------------------------------------
 

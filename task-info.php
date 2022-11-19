@@ -164,6 +164,7 @@ include("includes/sidebar.php");
               <th>#</th>
               <th>Task Title</th>
               <th>Assigned To</th>
+              <th>Email</th>
               <th>Start Time</th>
               <th>Time Stamp</th>
               <th>End Time</th>
@@ -175,12 +176,12 @@ include("includes/sidebar.php");
 
           <?php 
             if($user_role == 1){
-              $sql = "SELECT a.*, b.fullname 
+              $sql = "SELECT a.*, b.fullname, b.email 
                     FROM task_info a
                     INNER JOIN tbl_admin b ON(a.t_user_id = b.user_id)
                     ORDER BY a.task_id DESC";
             }else{
-              $sql = "SELECT a.*, b.fullname 
+              $sql = "SELECT a.*, b.fullname, b.email 
               FROM task_info a
               INNER JOIN tbl_admin b ON(a.t_user_id = b.user_id)
               WHERE a.t_user_id = $user_id
@@ -199,6 +200,7 @@ include("includes/sidebar.php");
               <td><?php echo $serial; $serial++; ?></td>
               <td><?php echo $row['t_title']; ?></td>
               <td><?php echo $row['fullname']; ?></td>
+              <td><?php echo $row['t_email']; ?></td>
               <td><?php echo $row['t_start_time']; ?></td>
               <td><?php echo $row['t_time_stamp']; ?></td>
               <td><?php echo $row['t_end_time']; ?></td>
