@@ -85,6 +85,9 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 													<td>Assign To</td><td><?php echo $row['fullname']; ?></td>
 												</tr>
 												<tr>
+													<td>Email Address</td><td><?php echo $row['t_email']; ?></td>
+												</tr>
+												<tr>
 													<td>Status</td><td><?php  if($row['status'] == 1){
 																				echo "In Progress";
 																			}elseif($row['status'] == 2){

@@ -50,7 +50,7 @@ INSERT INTO `attendance_info` (`aten_id`, `atn_user_id`, `in_time`, `out_time`, 
 
 CREATE TABLE IF NOT EXISTS `task_info` (
   `task_id` int(50) NOT NULL,
-  `t_email` varchar(100) NOT NULL,
+  `t_email` varchar(100) NULL,
   `t_title` varchar(120) NOT NULL,
   `t_description` text,
   `t_start_time` varchar(100) DEFAULT NULL,
@@ -66,7 +66,9 @@ CREATE TABLE IF NOT EXISTS `task_info` (
 
 INSERT INTO `task_info` (`task_id`, `t_email`, `t_title`, `t_description`, `t_start_time`, `t_end_time`, `t_user_id`, `status`) VALUES
 (15, 'terror.tivani@gmail.com', 'reception', 'You''re assigned to handle incoming calls and other communication-based tasks within the office.', '2022-11-16 12:00', '2022-11-16 13:00', 17, 2),
+(17, 'hannonmulaudzi@gmail.com', 'Verifying & Auditing', 'You''re assigned to Verify & Audit the system within the office.', '2022-11-18 10:00', '2022-11-20 15:10', 19, 1),
 (16, 'ramolefo.moriti@gmail.com', 'Filing', 'You''re assigned to the management of filing system within the office.', '2022-11-17 10:00', '2022-11-17 15:10', 18, 0);
+
 
 -- --------------------------------------------------------
 
@@ -93,8 +95,8 @@ INSERT INTO `tbl_admin` (`user_id`, `fullname`, `username`, `email`, `password`,
 (2, 'Moriti Ramolefo', 'admin1', 'ramolefo.moriti@gmail.com', '0192023a7bbd73250516f069df18b500', NULL, 1), 
 (3, 'Hannon Mulaudzi', 'admin2', 'hannonmulaudzi@gmail.com', '0192023a7bbd73250516f069df18b500', NULL, 1), 
 (17, 'Terror Tivani', 'user', 'terror.tivani@gmail.com', '3e7898bd2fc53a4ced081380893bcab3', '', 2),
-(18, 'Moriti Sunsson', 'user1', 'ramolefo.moriti@gmail.com', 'eb8ed5db82587f7a9bdbab2c55cbea4a', '', 2),
-(19, 'Hannon Rotondwa', 'user2', 'hannonmulaudzi@gmail.com', '0a8da84de683d6defdf4b87fcedbb993', '', 2);
+(18, 'Moriti Ramolefo', 'user1', 'ramolefo.moriti@gmail.com', 'eb8ed5db82587f7a9bdbab2c55cbea4a', '', 2),
+(19, 'Hannon Mulaudzi', 'user2', 'hannonmulaudzi@gmail.com', '0a8da84de683d6defdf4b87fcedbb993', '', 2);
 
 --
 -- Indexes for dumped tables
@@ -137,6 +139,8 @@ MODIFY `task_id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 ALTER TABLE `tbl_admin`
 MODIFY `user_id` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
