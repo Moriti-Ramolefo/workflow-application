@@ -334,6 +334,7 @@ public function __construct()
 		$task_description = $this->test_form_input_data($data['task_description']);
 		$t_start_time = $this->test_form_input_data($data['t_start_time']);
 		$t_end_time = $this->test_form_input_data($data['t_end_time']);
+		$t_email = $this->test_form_input_data($data['t_email']);
 		$assign_to = $this->test_form_input_data($data['assign_to']);
 
 		try{

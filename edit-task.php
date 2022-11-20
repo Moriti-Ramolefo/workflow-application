@@ -110,7 +110,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
                       <div class="form-group">
                     <label class="control-label col-sm-5">Email</label>
                     <div class="col-sm-7">
-                      <input type="text" name="email" placeholder="Enter Notifying Email" id="t_email"  class="form-control input-custom" <?php if($user_role != 1){ ?> readonly <?php } ?> val required>
+                      <input type="text" name="t_email" placeholder="Enter Notifying Email" id="t_email"  class="form-control input-custom" <?php if($user_role != 1){ ?> readonly <?php } ?> val required>
                     </div>
                   </div>
 
