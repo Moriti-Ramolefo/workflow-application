@@ -56,6 +56,20 @@ include("includes/sidebar.php");
 
 ?>
 
+<?php
+
+$sql = "SELECT t_email FROM task_info
+        WHERE t_end_time = t_time_stamp";
+
+$info = $obj_admin->manage_all_info($sql);
+
+while($row = $info->fetch(PDO::FETCH_ASSOC) ){
+
+    $email =
+ }
+
+?>
+
 <!-- task information -->
 
 <div class="modal fade" id="myModal" role="dialog">
@@ -114,15 +128,12 @@ include("includes/sidebar.php");
                   </div>
                   
                 </div>
-
-                
-                      <div class="form-group">
-                    <label class="control-label col-sm-5">Email</label>
-                    <div class="col-sm-7">
-                      <input type="text" name="t_email" placeholder="Enter Notifying Email" id="t_email" list="expense" id="default" class="form-control input-custom" <?php if($user_role != 1){ ?> readonly <?php } ?> val required>
-                    </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-5">Email</label>
+                <div class="col-sm-7">
+                  <input type="text" name="t_email" placeholder="Enter Notifying Email" id="t_email" list="expense" id="default" class="form-control" <?php if($user_role != 1){ ?> readonly <?php } ?> val required>
                   </div>
-                
+                </div>
                 <div class="form-group">
                 </div>
                 <div class="form-group">
@@ -173,7 +184,6 @@ include("includes/sidebar.php");
               <th>#</th>
               <th>Task Title</th>
               <th>Assigned To</th>
-              <th>Email</th>
               <th>Start Time</th>
               <th>Time Stamp</th>
               <th>End Time</th>
@@ -209,7 +219,6 @@ include("includes/sidebar.php");
               <td><?php echo $serial; $serial++; ?></td>
               <td><?php echo $row['t_title']; ?></td>
               <td><?php echo $row['fullname']; ?></td>
-              <td><?php echo $row['t_email']; ?></td>
               <td><?php echo $row['t_start_time']; ?></td>
               <td><?php echo $row['t_time_stamp']; ?></td>
               <td><?php echo $row['t_end_time']; ?></td>
