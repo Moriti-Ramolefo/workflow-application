@@ -50,6 +50,104 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
+<?php
+
+// Import PHPMailer classes into the global namespace
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+use PHPMailer\PHPMailer\SMTP;
+
+use PHPMailer\PHPMailer\Exception; 
+ 
+// Include library files 
+
+require 'PHPMailer/Exception.php'; 
+require 'PHPMailer/PHPMailer.php'; 
+require 'PHPMailer/SMTP.php'; 
+
+$massage = '';
+ 
+
+if(isset($_POST['update_task_info'])){
+	$email = $_POST['t_email'];
+	// $status = $_POST['status'];
+
+// Create an instance; Pass `true` to enable exceptions 
+$mail = new PHPMailer(); 
+ 
+// **************Server settings***************** //
+
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER;           //Enable verbose debug output 
+
+$mail->isSMTP();                                   // Set mailer to use SMTP 
+$mail->Host = 'smtp.gmail.com';                    // Specify main and backup SMTP servers 
+$mail->SMTPAuth = true;                            // Enable SMTP authentication 
+$mail->Username = 'terror.tivani@gmail.com';       // SMTP username 
+$mail->Password = 'hqyrjsfttuvrsapq';              // SMTP password 
+$mail->SMTPSecure = 'tls';                         // Enable TLS encryption, `ssl` also accepted 
+$mail->Port = 587 ;                                // TCP port to connect to 
+ 
+// Sender info 
+
+$mail->setFrom('terror.tivani@gmail.com', 'admin'); 
+$mail->addReplyTo('reply@example.com', 'admin');
+ 
+// Add a recipient 
+
+$mail->addAddress($email); //$mail->addCC('cc@example.com'); --AND/OR-- $mail->addBCC('bcc@example.com'); 
+$mail->isHTML(true); // Set email format to HTML 
+$mail->Subject = 'TASK NOTIFICATION ALERT !!'; // Mail subject 
+ 
+// Mail body content 
+
+$sql = "SELECT task_id, t_email, t_end_time FROM task_info
+        ORDER BY task_id";
+
+      $info = $obj_admin->manage_all_info($sql);
+
+      while($row = $info->fetch(PDO::FETCH_ASSOC)){
+
+        $t_email = $row["t_email"];
+        $end_time = $row["t_end_time"];
+
+        date_default_timezone_set('Africa/Johannesburg');
+        $date = date('Y-m-d H:i:s');
+
+        if ($t_email == true) {
+
+          $bodyContent = "<p>Hi there,<br><br>A new task has been added and it is <strong>DUE</strong> @<strong>$end_time</strong>.
+          <br>Please log in <a href='https://workflow-application.herokuapp.com/index.php' target='_blank'>here</a> 
+          and make approriate changes to this reference.<br><br>Regards.</p>"; 
+          $bodyContent .= "<p>This email is sent by the <b>Admin</b></p>"; 
+          $mail->Body   = $bodyContent; 
+        } 
+
+        // if ($date >= $end_time) {
+
+        //   $bodyContent = "<p>Hi there,<br><br>Your task is <strong>OVERDUE</strong>.
+        //   <br>Please log in <a href='https://workflow-application.herokuapp.com/index.php' target='_blank'>here</a> 
+        //   and make approriate changes to this reference.<br><br>Regards.</p>"; 
+        //   $bodyContent .= "<p>This email is sent by the <b>Admin</b></p>"; 
+        //   $mail->Body   = $bodyContent; 
+        // }
+      }  
+
+// Send email 
+
+if(!$mail->send()) { 
+    $massage = 'Notification NOT sent !!'; 
+} else { 
+    $massage = 'Notification sent !!'; 
+}
+
+//closing stmp connection
+
+$mail->smtpClose();
+}
+
+?>
+
 <!--modal dialog for editing tasks-->
 
 <div class="row">
@@ -131,7 +229,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 							<div class="col-sm-offset-3 col-sm-3">
 							</div>
 							<div class="col-sm-3">
-							<button type="submit" name="update_task_info" class="btn btn-success-custom">Update Now</button>
+							<button type="submit" name="update_task_info" id="update_task_info" class="btn btn-success-custom">Update Now</button>
 							</div>
 						</div>
 						</form> 
