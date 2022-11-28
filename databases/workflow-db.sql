@@ -8,6 +8,7 @@
 -- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+-- START TRANSACTION;
 SET time_zone = "+02:00";
 
 
@@ -99,8 +100,28 @@ INSERT INTO `tbl_admin` (`user_id`, `fullname`, `username`, `email`, `password`,
 (19, 'Hannon Mulaudzi', 'user2', 'hannonmulaudzi@gmail.com', '0a8da84de683d6defdf4b87fcedbb993', '', 2);
 
 --
+
+CREATE TABLE tbl_notity AS (
+SELECT `task_info`.`t_start_time`,`task_info`.`t_time_stamp`,`task_info`.`t_end_time`, 
+      `tbl_admin`.`fullname`,`tbl_admin`.`email`
+FROM `task_info`
+INNER JOIN `tbl_admin` ON (`task_info`.`t_user_id` = `tbl_admin`.`user_id`)
+ORDER BY `task_info`.`task_id`DESC
+);
+
+
 -- Indexes for dumped tables
 --
+
+--
+-- Table structure for table `drive_files`
+--
+CREATE TABLE `drive_files` (
+  `id` int(11) NOT NULL,
+  `file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `google_drive_file_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for table `attendance_info`
@@ -121,6 +142,12 @@ ALTER TABLE `tbl_admin`
  ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `drive_files`
+--
+ALTER TABLE `drive_files`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -139,8 +166,20 @@ MODIFY `task_id` int(50) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 ALTER TABLE `tbl_admin`
 MODIFY `user_id` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
-
+--
+-- AUTO_INCREMENT for table `drive_files`
+--
+ALTER TABLE `drive_files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- INSERT INTO tbl_notity( t_start_time, t_time_stamp, t_end_time, fullname, email)
+-- SELECT task_info.t_start_time,task_info.t_time_stamp,task_info.t_end_time, 
+--       tbl_admin.fullname,tbl_admin.email
+-- FROM task_info
+-- INNER JOIN tbl_admin ON (task_info.t_user_id = tbl_admin.user_id)
+-- ORDER BY task_info.task_id;
